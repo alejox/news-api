@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import NewsCard from "./NewsCard";
 
 
 const NewsList = () => {
@@ -23,10 +22,14 @@ const NewsList = () => {
       <article className="container">
         {
         hits?.map((hit) => (
-          <div
+          <div className="container"
           key={hit.id}
           >
-            {hit.author}
+            <article>
+            <h2>{hit.author}</h2>
+            <p>{hit.title}</p>
+            
+            </article>
             
           </div>
           

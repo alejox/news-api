@@ -1,4 +1,4 @@
-import NewsCard from "./components/NewsCard"
+import NewsItem from "./components/NewsItem"
 import NewsList from "./components/NewsList"
 
 function App() {
