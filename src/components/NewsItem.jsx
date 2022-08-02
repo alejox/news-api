@@ -1,16 +1,20 @@
-import './newsItem.css'
+const NewsItem = ({ title, url }) => {
 
-const NewsItem = ({title, descrpition, url, urlImage}) => {
+  let num = Math.random(1);
   return (
-    <div className='newas-app'>
-      
-      {/* <div className="news-item">
-        <img className='news-img' src={urlImage} alt= ""/>
-        <h3><a href=""></a></h3>
-        <p></p>
-      </div> */}
-    </div>
-  )
-}
+    <div className='card_p d-flex container'>
+      <img src={`https://picsum.photos/150/100?random=${num}`} alt='img' className="rounded-4 m-3" />
 
-export default NewsItem
+      <div className='card border-0' style={{ width: '18rem' }}>
+        <div className='card-body'>
+          <h5 className='card-title'>{title}</h5>
+          <a href={url} target='_blank' className='btn btn-primary'>
+            Ver detalle
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NewsItem;
